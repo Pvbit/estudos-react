@@ -1,13 +1,12 @@
-function Book({ livro }) {
-  const { title, author, year, genre, image } = livro;
-
+function Book({ lista }) {
   return (
     <>
-      <h2>{title}</h2>
-      <p>{author}</p>
-      <p>{year}</p>
-      <p>{genre}</p>
-      <img src={image} alt="" />
+      {lista.map((livro) => (
+        <div>
+          <h2>{livro.title}</h2>
+          <p>{livro.author}</p>
+        </div>
+      ))}
     </>
   );
 }
